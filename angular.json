@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "credit-card": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "credit-card"
+    }
+  },
+  "defaultProject": "credit-card",
+  "cli": {
+    "analytics": "bcd1725f-44e7-48a6-b9dd-d8fc08823555"
+  }
 }
