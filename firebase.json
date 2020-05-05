@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "credit-card",
+      "public": "dist/credit-card",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

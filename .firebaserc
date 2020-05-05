@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "credit-card-ffac9": {
+      "hosting": {
+        "credit-card": [
+          "credit-card-ffac9"
+        ]
+      }
+    }
+  }
+}
