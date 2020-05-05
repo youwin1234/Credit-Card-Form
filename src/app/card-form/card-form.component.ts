@@ -14,7 +14,7 @@ export class CardFormComponent implements OnInit {
   cardForm = new FormGroup({
     name: new NameFormControl('', [Validators.required, Validators.minLength(2),Validators.pattern(/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/), Validators.maxLength(26)]),
     cardNumber: new CardNumberFormControl('', [Validators.required, Validators.minLength(19), 
-      Validators.pattern(/^(?:(?<visa>4[0-9]{3}\-{1}[0-9]{4}\-{1}[0-9]{4}\-{1}(?:[0-9]{4})?)|(?<mastercard>5[1-5][0-9]{14})|(?<discover>6(?:011|5[0-9]{2})[0-9]{12})|(?<amex>3[47][0-9]{13})|(?<diners>3(?:0[0-5]|[68][0-9])?[0-9]{11})|(?<jcb>(?:2131|1800|35[0-9]{3})[0-9]{11}))$/),
+      Validators.pattern(/^(?:(?<visa>4[0-9]{3}\-{1}[0-9]{4}\-{1}[0-9]{4}\-{1}(?:[0-9]{4})?)|(?<mastercard>5[1-5][0-9]{2}\-{1}[0-9]{4}\-{1}[0-9]{4}\-{1}[0-9]{4})|(?<discover>6(?:011|5[0-9]{2})\-{1}[0-9]{4}\-{1}[0-9]{4}\-{1}[0-9])|(?<amex>3[47][0-9]{1}\-{1}[0-9]{4}\-{1}[0-9]{4}\-{1}[0-9]{4}))$/),
       Validators.maxLength(19)]),
     expiration: new DateFormControl('', [Validators.required, Validators.pattern(/^(0[1-9]|1[0-2])\/\d{2}$/)]),
     securityCode: new CodeFormControl('', [Validators.required, Validators.minLength(3), Validators.pattern(/^[0-9]{3,4}$/),Validators.maxLength(4)])
