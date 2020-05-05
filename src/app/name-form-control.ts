@@ -6,11 +6,11 @@ export class NameFormControl extends FormControl{
             super.setValue('', {...options, emitModelToViewChange:true});
             return;
         }
-        if(value.match(/[^a-zA-Z a-zA-Z|\/]/gi)){
+        if(value.match(/[^a-zA-Z |\/]/gi)){
             super.setValue(this.value, {...options, emitModelToViewChange: true});
             return;
         }
-        if(value.length>25){
+        if(value.length>26){
             super.setValue(this.value, {...options, emitModelToViewChange:true});
             return;
         }

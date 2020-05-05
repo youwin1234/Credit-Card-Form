@@ -12,7 +12,7 @@ import { NameFormControl } from '../name-form-control';
 })
 export class CardFormComponent implements OnInit {
   cardForm = new FormGroup({
-    name: new NameFormControl('', [Validators.required, Validators.minLength(2),Validators.pattern(/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/), Validators.maxLength(25)]),
+    name: new NameFormControl('', [Validators.required, Validators.minLength(2),Validators.pattern(/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/), Validators.maxLength(26)]),
     cardNumber: new CardNumberFormControl('', [Validators.required, Validators.minLength(16), 
       Validators.pattern(/^(?:(?<visa>4[0-9]{12}(?:[0-9]{3})?)|(?<mastercard>5[1-5][0-9]{14})|(?<discover>6(?:011|5[0-9]{2})[0-9]{12})|(?<amex>3[47][0-9]{13})|(?<diners>3(?:0[0-5]|[68][0-9])?[0-9]{11})|(?<jcb>(?:2131|1800|35[0-9]{3})[0-9]{11}))$/),
       Validators.maxLength(16)]),
